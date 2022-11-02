@@ -68,7 +68,7 @@ class ERC:
             
   
             mask = np.zeros((image.shape[0],image.shape[1],1), dtype = 'uint8')
-            IDs, confidences, bboxs = self.net.detect(image, confTh = 0.3)
+            IDs, confidences, bboxs = self.net.detect(image, confThreshold = 0.3)
 
             bboxs = list(bboxs)
             confidences = list(np.array(confidences).reshape(1,-1)[0])
